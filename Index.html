@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleanskad Jombang | Premium Shoe Treatment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0062ff;
+            --secondary: #00d2ff;
+            --dark: #1a1c1e;
+            --light: #f8faff;
+            --accent: #ff3b30;
+            --gray: #6c757d;
+            --instagram: #E1306C;
+            --whatsapp: #25D366;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--primary); letter-spacing: -1px; text-decoration: none; }
+        
+        .nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+        .location-tag { 
+            background: var(--primary); 
+            color: white; 
+            padding: 10px 18px; 
+            border-radius: 50px; 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 80px 5% 100px;
+            background: radial-gradient(circle at top right, #eef6ff 0%, #ffffff 100%);
+            text-align: center;
+        }
+
+        .hero span.badge { 
+            color: var(--primary); 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            font-size: 0.75rem; 
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 8vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero h1 span { color: var(--primary); }
+
+        /* --- PRICING SECTION --- */
+        .pricing { padding: 80px 5%; background: #fff; text-align: center; }
+        
+        .price-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: white;
+            border: 1px solid #eee;
+            padding: 40px 30px;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.4s;
+        }
+
+        .price-card.featured { background: var(--dark); color: white; position: relative; border: none; }
+        
+        .price-box { border: 2px solid var(--primary); border-radius: 16px; padding: 15px; margin: 25px 0; }
+        .new-price { font-size: 2.2rem; font-weight: 800; display: block; }
+
+        /* --- CONTACT & LOCATION INFO --- */
+        .contact-info {
+            padding: 80px 5%;
+            background: var(--light);
+            text-align: center;
+        }
+
+        .contact-card {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+        }
+
+        /* --- BUTTONS --- */
+        .btn-wa { background: var(--whatsapp); color: white; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: 700; text-align: center; transition: 0.3s; }
+        .btn-wa:hover { filter: brightness(1.1); }
+        .btn-insta-outline { display: inline-block; margin-top: 15px; color: var(--instagram); text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+
+        /* --- FLOATING WA --- */
+        .floating-wa { position: fixed; bottom: 25px; right: 25px; background: var(--whatsapp); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 9999; text-decoration: none; font-size: 30px; box-shadow: 0 10px 25px rgba(37,211,102,0.3); }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/6285185926986" class="floating-wa" target="_blank">💬</a>
+
+    <nav>
+        <a href="#" class="logo">CLEANSKAD.</a>
+        <div class="nav-links">
+            <a href="#pricing">Layanan</a>
+            <a href="#location">Lokasi</a>
+            <a href="https://instagram.com/cleanskad._" target="_blank">Instagram</a>
+        </div>
+        <a href="#location" class="location-tag">📍 Jombang</a>
+    </nav>
+
+    <section class="hero">
+        <span class="badge">Professional Shoe Care</span>
+        <h1>Sepatu Bersih<br><span>Tanpa Ribet</span></h1>
+        <p>Solusi perawatan sepatu premium di Jombang. Hubungi kami, kami jemput sepatu Anda!</p>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="section-title" style="margin-bottom: 40px;">
+            <h2 style="font-size: 2.5rem; font-weight: 800;">Layanan Kami</h2>
+            <p style="color: var(--gray);">Deep Clean Cuma 20k!</p>
+        </div>
+        
+        <div class="price-container">
+            <div class="price-card">
+                <h3>Fast Clean</h3>
+                <div class="price-box">
+                    <span style="text-decoration: line-through; opacity: 0.5;">Rp 25.000</span>
+                    <span class="new-price">Rp 15k</span>
+                </div>
+                <a href="https://wa.me/6285185926986?text=Halo%20Cleanskad,%20saya%20mau%20order%20Fast%20Clean" class="btn-wa">Pesan via WA</a>
+                <a href="https://instagram.com/cleanskad._" class="btn-insta-outline">Tanya di Instagram</a>
+            </div>
+
+            <div class="price-card featured">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 5px 15px; border-radius: 50px; font-size: 0.7rem; font-weight: 800;">PALING FAVORIT</div>
+                <h3>Deep Clean</h3>
+                <div class="price-box" style="border-color: var(--secondary);">
+                    <span style="text-decoration: line-through; opacity: 0.5; color: rgba(255,255,255,0.5);">Rp 45.000</span>
+                    <span class="new-price">Rp 20k</span>
+                </div>
+                <a href="https://wa.me/6285185926986?text=Halo%20Cleanskad,%20saya%20mau%20order%20Deep%20Clean" class="btn-wa" style="background: white; color: var(--dark);">Pesan via WA</a>
+                <a href="https://instagram.com/cleanskad._" class="btn-insta-outline" style="color: var(--secondary);">Tanya di Instagram</a>
+            </div>
+
+            <div class="price-card">
+                <h3>Unyellowing</h3>
+                <div class="price-box">
+                    <span style="text-decoration: line-through; opacity: 0.5;">Rp 60.000</span>
+                    <span class="new-price">Rp 45k</span>
+                </div>
+                <a href="https://wa.me/6285185926986?text=Halo%20Cleanskad,%20saya%20mau%20order%20Unyellowing" class="btn-wa">Pesan via WA</a>
+                <a href="https://instagram.com/cleanskad._" class="btn-insta-outline">Tanya di Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info" id="location">
+        <div class="contact-card">
+            <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 10px;">Workshop Cleanskad</h2>
+            <p style="color: var(--gray); margin-bottom: 25px;">Kunjungi workshop kami untuk hasil cuci sepatu maksimal.</p>
+            
+            <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 5px;">📍 Alamat:</p>
+            <p style="color: var(--dark); margin-bottom: 30px;">Jl. Halmahera No.15, Kaliwungu, Kec. Jombang, Jawa Timur 61419</p>
+            
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="https://maps.google.com/?q=Cleanskad+(cuci+sepatu+Jombang)+Jl.+Halmahera+No.15" target="_blank" class="btn-wa" style="background: var(--primary);">
+                    Buka Petunjuk Jalan (Google Maps)
+                </a>
+                <a href="https://instagram.com/cleanskad._" target="_blank" class="btn-wa" style="background: var(--instagram);">
+                    Lihat Portofolio di Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 40px 5%; background: #fff; text-align: center; border-top: 1px solid #eee;">
+        <p style="font-weight: 800; color: var(--primary); margin-bottom: 5px;">CLEANSKAD. JOMBANG</p>
+        <p style="font-size: 0.8rem; color: var(--gray);">© 2026 Cleanskad. Solusi Sepatu Bersih & Wangi.</p>
+    </footer>
+
+</body>
+  </html>
+  
